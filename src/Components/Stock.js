@@ -27,7 +27,7 @@ const Stock = () => {
         <Typography color="black" variant="h5">$25</Typography>
         </Box>
         <Box style={{marginLeft : "100px"}}>
-          <LineChart/>
+          <LineChart color ={"rgb(247 241 241)"}/>
         </Box>
 
 

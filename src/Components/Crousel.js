@@ -3,6 +3,7 @@ import logo from "../Assets/logo.png"
 import BasicFilm from "react-film";
 import Stock from "./Stock";
 
+
 function Carousel(props) {
   return (
    

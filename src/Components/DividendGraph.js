@@ -1,14 +1,16 @@
 import React from "react";
-import { AreaChart,Area,Tooltip} from "recharts";
-import data from "../Data/data";
-const LineChart = ({color}) => {
+import { AreaChart,Area,Tooltip,XAxis,YAxis} from "recharts";
+import data2 from "../Data/data2";
+const DividendGraph = () => {
   return (
     <AreaChart
-      width={140}
-      height={80}
-      data={data}
+      width={380}
+      height={250}
+      data={data2}
       margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
     >
+        <YAxis />
+        <XAxis dataKey="name" />
       <Area
         type="monotone"
         dataKey="pv"
@@ -21,4 +23,4 @@ const LineChart = ({color}) => {
   );
 };
 
-export default LineChart;
+export default DividendGraph;
