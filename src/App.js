@@ -15,11 +15,14 @@ function App() {
             path="/home"
             element={
               <>
-                <Navbar />
+                <Navbar>
                 <Home />
+                </Navbar>
               </>
             }
           />
+
+
         </Routes>
       </BrowserRouter>
       {/* <h1>Hello world</h1> */}
