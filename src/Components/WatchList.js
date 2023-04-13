@@ -30,7 +30,9 @@ var stat = useRef(null)
               color="primary"
               aria-label="upload picture"
               component="label"
-              style={{ marginLeft: "220px", marginTop: "12px" }}
+              
+              style={{ marginLeft: "220px", marginTop: "12px",color : "black",background : "orange",borderRadius : "10px" }}
+              
             >
               <AddIcon />
             </IconButton>
@@ -38,13 +40,13 @@ var stat = useRef(null)
         </Box>
         <div>
 
-        <Carousel  ref={ref => (stat = ref)} itemsToShow={10} style={{height : "440px"}} verticalMode>
+        <Carousel  ref={ref => (stat = ref)} itemsToShow={10} showArrows={false} style={{height : "440px"}} verticalMode>
             <StockListItem/>
-            <Divider/>
+            
             <StockListItem/>
-            <Divider/>
+            
             <StockListItem/>
-            <Divider/>
+           
             <StockListItem/>
             <Divider/>
             <StockListItem/>

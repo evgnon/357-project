@@ -18,6 +18,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import logo from "../Assets/logo.png";
 import SearchBar from "material-ui-search-bar";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const drawerWidth = 300;
 
@@ -36,26 +40,47 @@ function Navbar(props) {
 
         <Typography
           variant="h6"
-          fontWeight={"120px"}
+          
+          fontWeight={"1200px"}
           mx={"25px"}
           color={"#7E7D82"}
         >
-          User Pannel
+          User Panel
         </Typography>
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem key={text}>
-              <ListItemButton
-                style={{ borderRadius: "10px" }}
-                sx={{ color: "#7E7D82" }}
-              >
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItem>
+            <ListItemButton
+              style={{ borderRadius: "10px" }}
+              sx={{ color: "#7E7D82" }}
+            >
+              <ListItemIcon>
+                <DashboardIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dashboard" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton
+              style={{ borderRadius: "10px" }}
+              sx={{ color: "#7E7D82" }}
+            >
+              <ListItemIcon>
+                <AccountBalanceIcon />
+              </ListItemIcon>
+              <ListItemText primary="Holdings" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton
+              style={{ borderRadius: "10px" }}
+              sx={{ color: "#7E7D82" }}
+            >
+              <ListItemIcon>
+                <AttachMoneyIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dividend" />
+            </ListItemButton>
+          </ListItem>
         </List>
       </div>
 
@@ -67,16 +92,15 @@ function Navbar(props) {
         }}
       >
         <List>
-          {["Connect To Wallet", "Logout"].map((text, index) => (
-            <ListItem key={text}>
-              <ListItemButton style={{ borderRadius: "10px", color: "gray" }}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItem >
+            <ListItemButton style={{ borderRadius: "10px", color: "gray" }}>
+              <ListItemIcon>
+                <LogoutIcon/>
+                
+              </ListItemIcon>
+              <ListItemText primary="Logout" />
+            </ListItemButton>
+          </ListItem>
         </List>
       </div>
     </div>
@@ -94,7 +118,7 @@ function Navbar(props) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}
-        style={{ background: "white" }}
+        style={{ root: { borderBottom: "none" }, background: "white" }}
       >
         <Toolbar>
           <IconButton
@@ -108,12 +132,10 @@ function Navbar(props) {
           </IconButton>
           <Typography
             ml={"5px"}
-            fontWeight={"30px"}
-            fontSize={"30px"}
+            fontSize={"35px"}
             padding={"10px"}
             color={"black"}
-            fontFamily={"inter"}
-            variant="h4"
+            variant="h1"
           >
             Hello Mubashir,
           </Typography>
@@ -175,16 +197,14 @@ function Navbar(props) {
         sx={{
           flexGrow: 1,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
-          background : "rgb(247 241 241)",
-          minHeight : "850px"
-
+          background: "rgb(247 241 241)",
+          minHeight: "850px",
         }}
       >
         <Toolbar />
-     
-        
-            {props.children}
-            {/* <Typography paragraph>
+
+        {props.children}
+        {/* <Typography paragraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Rhoncus dolor purus non enim praesent elementum facilisis leo vel.
@@ -214,7 +234,6 @@ function Navbar(props) {
               maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
               aliquam ultrices sagittis orci a.
             </Typography> */}
-          
       </Box>
     </Box>
   );

@@ -1,6 +1,4 @@
-.rec.rec-arrow {
-    visibility: hidden;
-}
+
 .rec.rec-pagination{
-    visibility: hidden;
-}
+   display : none ;
+} 

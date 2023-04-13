@@ -1,27 +1,27 @@
 import React from "react";
 import { Card, CardContent, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
-import logo from "../Assets/logo.png"
-import Divider from '@mui/material/Divider';
-
+import logo from "../Assets/logo.png";
+import Divider from "@mui/material/Divider";
 
 const StockListItem = () => {
-    return(
-        <>
-        <Box style={{ display: "flex",marginTop : "15px" }}>
-          <img src={logo} alt="" style={{ maxWidth: "40px" }} />
-          <Typography style={{marginLeft : "10px"}}variant="h5" color="black" component="h2" >
-            Tesla
-          </Typography>
-          <Box style={{marginLeft : "100px",maxWidth : "250x"}}>
+  return (
+    <>
+      <Box style={{ display: "flex", marginTop: "15px", width: "100%" }}>
+        <img src={logo} alt="" style={{ maxWidth: "40px" }} />
+        <Box>
+          <Typography style={{ marginLeft: "16px",color : "black"}} variant="h6" >Tesla</Typography>
+          <Typography style={{ marginLeft: "16px" }} color="textSecondary">TSLA</Typography>
+          
 
-          <Typography color="textSecondary" >TSLA</Typography>
-          <Typography color="orange">+40</Typography>
-            
-          </Box>
         </Box>
-        <Divider/>
-        </>
-    )
-}
+        <Box style={{ marginLeft: "180px", maxWidth: "250x" }}>
+        <Typography style={{ color : "black" }} variant="h6">$102.5</Typography>
+          <Typography style={{color :"orange"}} variant="subtitle1">+40</Typography>
+        </Box>
+      </Box>
+      <Divider />
+    </>
+  );
+};
 export default StockListItem;

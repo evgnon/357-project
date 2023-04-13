@@ -5,13 +5,16 @@ import Typography from "@mui/material/Typography";
 import Balance from "../Components/Balance";
 import Dividend from "../Components/Dividend";
 import WatchList from "../Components/WatchList";
+import Limit from "../Components/Limit"
+import Portfolio from "../Components/Portfolio";
+import Limit2 from "../Components/Limit2";
 const Home = () => {
   return (
     <Grid spacing={2}>
       <Grid item xs={12} style={{ padding: "20px" }}>
-        <Typography variant="h5" color={"black"}>
+        <h2>
           My Stocks
-        </Typography>
+        </h2>
         <Carousel />
       </Grid>
 
@@ -27,8 +30,15 @@ const Home = () => {
         </Grid>
       </Grid>
 
-      <Grid item xs={12} style={{ border: "2px solid black" }}>
-        Analytics
+      <Grid container spacing={2} style={{ padding: "20px" }}>
+      <Grid item xs={8} >
+        <Portfolio/>
+      </Grid>
+      <Grid item xs={4}>
+        <Limit/>
+        <Limit2/>
+
+      </Grid>
       </Grid>
     </Grid>
   );
