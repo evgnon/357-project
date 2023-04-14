@@ -106,7 +106,7 @@ export default function Login() {
 
               }}
               onClick={Login}
-              href="/home"
+              href="/account"
             >
               Sign In
             </Button>

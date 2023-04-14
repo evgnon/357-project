@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import Carousel from "../Components/Crousel";
+import Carousels from "../Components/Crousel";
 import Typography from "@mui/material/Typography";
 import Balance from "../Components/Balance";
 import Dividend from "../Components/Dividend";
@@ -15,26 +15,26 @@ const Home = () => {
         <h2>
           My Stocks
         </h2>
-        <Carousel />
+        <Carousels />
       </Grid>
 
-      <Grid container spacing={2} style={{ padding: "20px" }}>
-        <Grid item xs={4} >
+      <Grid container item xs={12} spacing={2} style={{ padding: "20px" }}>
+        <Grid item xs={12} sm={4} >
           <Balance />
         </Grid>
-        <Grid item xs={4} >
+        <Grid item xs={12} sm={4}>
           <Dividend/>
         </Grid>
-        <Grid item xs={4} >
+        <Grid item xs={12} sm= {4}>
           <WatchList/>
         </Grid>
       </Grid>
 
-      <Grid container spacing={2} style={{ padding: "20px" }}>
-      <Grid item xs={8} >
+      <Grid container item xs={12} spacing={2} style={{ padding: "20px" }}>
+      <Grid item xs={12} sm={8} >
         <Portfolio/>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={12} sm={4}>
         <Limit/>
         <Limit2/>
 

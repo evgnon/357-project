@@ -67,7 +67,7 @@ function Navbar(props) {
               <ListItemIcon>
                 <AccountBalanceIcon />
               </ListItemIcon>
-              <ListItemText primary="Holdings" />
+              <ListItemText primary="My Account" />
             </ListItemButton>
           </ListItem>
           <ListItem>
@@ -198,7 +198,7 @@ function Navbar(props) {
           flexGrow: 1,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           background: "rgb(247 241 241)",
-          minHeight: "850px",
+          minHeight: "850px"
         }}
       >
         <Toolbar />

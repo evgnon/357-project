@@ -3,10 +3,11 @@ import logo from "../Assets/logo.png";
 import { Box } from "@mui/material";
 import LineChart from "./LineChart";
 import { Card, CardContent, Typography } from "@material-ui/core";
+import { ResponsiveContainer } from "recharts";
 
 const Stock = () => {
   return (
-    <Card style={{borderRadius : "20px",marginRight : "20px",background :"rgb(247 241 241)"}}>
+    <Card style={{minWidth : "sm",borderRadius : "20px",marginRight : "20px",background :"rgb(247 241 241)"}}>
       <CardContent  >
         <Box style={{ display: "flex" }}>
           <img src={logo} alt="" style={{ maxWidth: "40px" }} />
@@ -27,6 +28,7 @@ const Stock = () => {
         <Typography color="black" variant="h5">$25</Typography>
         </Box>
         <Box style={{marginLeft : "100px"}}>
+      
           <LineChart color ={"rgb(247 241 241)"}/>
         </Box>
 

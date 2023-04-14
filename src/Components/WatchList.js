@@ -20,27 +20,29 @@ var stat = useRef(null)
         borderRadius: "20px",
         marginRight: "20px",
         padding: "10px",
+        width : "100%"
       }}
     >
       <CardContent>
-        <Box style={{ display: "flex" }}>
-          <h3>Watch list</h3>
-          <div>
+        <Box style={{ display: "flex"}}>
+          
+          <h3 >Watch list</h3>
+          <Box style={{display : "flex",width : "100%", justifyContent : "flex-end"}}>
             <IconButton
               color="primary"
               aria-label="upload picture"
               component="label"
               
-              style={{ marginLeft: "220px", marginTop: "12px",color : "black",background : "orange",borderRadius : "10px" }}
+              style={{height : "40px", marginTop: "20px",color : "black",background : "orange",borderRadius : "10px" }}
               
             >
               <AddIcon />
             </IconButton>
-          </div>
+          </Box>
         </Box>
         <div>
 
-        <Carousel  ref={ref => (stat = ref)} itemsToShow={10} showArrows={false} style={{height : "440px"}} verticalMode>
+        <Carousel  ref={ref => (stat = ref)} itemsToShow={10} showArrows={false} style={{height : "390px"}} verticalMode>
             <StockListItem/>
             
             <StockListItem/>
@@ -57,15 +59,18 @@ var stat = useRef(null)
             <StockListItem/>
         </Carousel>
         </div>
+        <Box style={{display : "flex",justifyContent : "center"}}>
+
         <IconButton
               color="primary"
               aria-label="upload picture"
               component="label"
-              style={{ marginTop: "12px",justifyItems :"center",background: "orange",color :"black",marginLeft :"170px" }}
+              style={{ marginTop: "12px",background: "orange",color :"black" }}
               onClick={() => {stat.slideNext()}}
-            >
+              >
               <ArrowDownwardIcon />
             </IconButton>
+        </Box>
 
       </CardContent>
     </Card>

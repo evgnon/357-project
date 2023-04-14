@@ -10,7 +10,7 @@ const Stock2 = () => {
       style={{
         borderRadius: "20px",
         marginRight: "20px",
-        background: "black",
+        background: "black"
       }}
     >
       <CardContent>

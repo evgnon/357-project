@@ -10,7 +10,7 @@ import LineChart from "./LineChart";
 
 function Balance() {
   return (
-    <Card style={{ borderRadius : "20px",padding : "10px" }}>
+    <Card style={{width : "100%", borderRadius : "20px",padding : "10px" }}>
       <CardContent>
         <h3 style={{ fontWeight: "20px" }}>Balance</h3>
 
@@ -20,7 +20,7 @@ function Balance() {
               borderRadius: "20px",
               paddingInline: "40px",
               paddingBlock: "10px",
-              width: "350px",
+              flex : "3",
               background: "orange",
             }}
           >
@@ -32,7 +32,7 @@ function Balance() {
               paddingInline: "10px",
               paddingBlock: "10px",
               marginLeft: "10px",
-              background: "#9eff9e",
+              background: "#9eff9e"
             }}
           >
             <h5>+5.00%</h5>
@@ -42,20 +42,22 @@ function Balance() {
           <h3 style={{ fontWeight: "20px" }}>Invested</h3>
         </div>
 
-        <Box style={{ display: "flex", marginTop: "10px" }}>
-          <div
+        <Box style={{ display: "flex", marginTop: "10px",background: "black",borderRadius : "20px" }}>
+          
+            <h5 style={{ color: "white",marginLeft : "40px" }}>$15,000</h5>
+
+            <div
             style={{
               borderRadius: "20px",
-              paddingInline: "40px",
               paddingBlock: "10px",
+              marginRight : "10px",
               width: "100%",
-              background: "black",
               display: "flex",
+              justifyContent : "flex-end"
             }}
           >
-            <h5 style={{ color: "white" }}>$15,000</h5>
             <Button
-              style={{ marginLeft: "220px", background: "orange" }}
+              style={{  background: "orange" }}
               variant="contained"
               endIcon={<ArrowForwardIcon />}
             ></Button>
@@ -77,23 +79,26 @@ function Balance() {
           >
             Tesla
           </Typography>
-          <Box style={{ marginLeft: "220px", maxWidth: "200x" }}>
+          <Box style={{display : "flex",justifyContent : "flex-end",width : "100%"}}>
+
+          <Box >
             <Typography color="textSecondary">TSLA</Typography>
             <Typography color="orange">+40</Typography>
           </Box>
+          </Box>
         </Box>
 
-        <Box style={{ display: "flex",marginTop : "5px" }}>
+        <Box style={{ display: "flex",marginTop : "5px",display : "flex"}}>
           
-          <Box style={{ marginLeft: "7px", maxWidth: "200x" }}>
+          <Box style={{ marginLeft: "7px", maxWidth: "200x",flex : "2" }}>
             <h4 style={{ color: "grey" }}>Invested Value</h4>
             <h4>$20</h4>
           </Box>
-          <Box style={{ marginLeft: "30px", maxWidth: "200x" }}>
+          <Box style={{ marginLeft: "30px", maxWidth: "200x",flex : "2" }}>
             <h4 style={{ color: "grey" }}>Current Value</h4>
             <h4>$2000</h4>
           </Box>
-          <Box style={{marginLeft : "30px",marginTop : "19px"}}>
+          <Box style={{marginTop : "19px", flex : "1"}}>
           <LineChart color ={"rgb(247 241 241)"}/>
         </Box>
         </Box>

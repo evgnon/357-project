@@ -15,7 +15,7 @@ const Limit2 = () => {
       }}
     >
       <CardContent>
-        <Box style={{ display: "flex",height : "60px" }}>
+        <Box style={{ display: "flex", height: "60px", width: "100%" }}>
           <IconButton
             color="primary"
             aria-label="upload picture"
@@ -25,18 +25,22 @@ const Limit2 = () => {
               background: "orange",
               height: "40px",
               width: "40px",
-              marginTop :"22px",
-              marginLeft : "20px"
-
+              marginTop: "22px",
+              marginLeft: "20px",
             }}
           >
             <ArrowForwardIcon />
           </IconButton>
-          <h1 style={{ color: "#d5d5d5", marginLeft: "280px",marginTop :"14px" }}>15</h1>
+          <Box style={{ display: "flex", justifyContent: "flex-end",width : "100%",marginTop : "20px" }}>
+            <h1 style={{ color: "#d5d5d5", marginLeft: "", marginTop: "0px" }}>
+              15
+            </h1>
+          </Box>
         </Box>
-        <Box style={{marginTop :"5px"}}>
-        <h3 style={{ color: "#d5d5d5",marginTop: "0px" }}>Total Transaction this week</h3>
-
+        <Box style={{ marginTop: "15px" }}>
+          <h3 style={{ color: "#d5d5d5" }}>
+            Total Transaction this week
+          </h3>
         </Box>
       </CardContent>
     </Card>
