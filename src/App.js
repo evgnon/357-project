@@ -2,8 +2,9 @@ import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Page/Home";
+import Account from "./Page/Account";
 import Login from "./Page/Login";
+import Explore from "./Page/Explore";
 import Register from "./Page/Register";
 
 function App() {
@@ -18,11 +19,24 @@ function App() {
             element={
               <>
                 <Navbar>
-                <Home />
+                <Account />
                 </Navbar>
               </>
             }
           />
+          <Route
+            path="/explore"
+            element={
+              <>
+                <Navbar>
+                <Explore />
+                </Navbar>
+              </>
+            }
+          />
+          
+
+
 
 
         </Routes>
