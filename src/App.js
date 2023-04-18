@@ -6,6 +6,7 @@ import Account from "./Page/Account";
 import Login from "./Page/Login";
 import Explore from "./Page/Explore";
 import Register from "./Page/Register";
+import Disclaimer from "./Page/Disclaimer";
 
 function App() {
   return (
@@ -34,7 +35,19 @@ function App() {
               </>
             }
           />
+          <Route
+            path="/disclaimer"
+            element={
+              <>
+             
+                <Disclaimer />
+                
+              </>
+            }
+          />
           
+          
+
 
 
 
