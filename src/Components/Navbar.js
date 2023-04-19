@@ -145,6 +145,7 @@ function Navbar(props) {
           >
             <MenuIcon />
           </IconButton>
+
           <div style={{display : "flex",width : "100%"}}>
             <Typography
               ml={"5px"}
@@ -169,6 +170,7 @@ function Navbar(props) {
               />
             </div>
           </div>
+
         </Toolbar>
       </AppBar>
       <Box

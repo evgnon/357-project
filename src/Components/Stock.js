@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/2.png";
 import { Box } from "@mui/material";
 import LineChart from "./LineChart";
 import { Card, CardContent, Typography } from "@material-ui/core";
@@ -11,10 +11,10 @@ const Stock = () => {
       <CardContent  >
         <Box style={{ display: "flex" }}>
           <img src={logo} alt="" style={{ maxWidth: "40px" }} />
-          <Typography style={{marginLeft : "10px"}}variant="h5" color="black" component="h2" >
+          <Typography style={{marginLeft : "10px", marginTop: "10px"}}variant="h5" color="black" component="h2" >
             Tesla
           </Typography>
-          <Box style={{marginLeft : "100px",maxWidth : "200x"}}>
+          <Box style={{marginLeft : "60px",maxWidth : "200x", marginTop: "10px"}}>
 
           <Typography color="textSecondary" >TSLA</Typography>
           <Typography color="orange">+40</Typography>
@@ -27,7 +27,7 @@ const Stock = () => {
         <Typography color="textSecondary">Current Value</Typography>
         <Typography color="black" variant="h5">$25</Typography>
         </Box>
-        <Box style={{marginLeft : "100px"}}>
+        <Box style={{marginLeft : "40px"}}>
       
           <LineChart color ={"rgb(247 241 241)"}/>
         </Box>

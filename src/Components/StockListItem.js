@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/2.png";
 import Divider from "@mui/material/Divider";
 
 const StockListItem = () => {
