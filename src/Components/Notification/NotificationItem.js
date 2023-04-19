@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 const NotificationItem = (props) => {
   return (
     <>
-      <h3 style={{ marginBottom: "0px" }}>Schedules Stock purchase</h3>
+      <h3>Schedules Stock purchase</h3>
       <Box
         style={{
           display: "flex",
@@ -16,6 +16,7 @@ const NotificationItem = (props) => {
             width: "80px",
             height: "80px",
             borderRadius: "10px",
+            marginBottom: "25px"
           }}
         ></Box>
 

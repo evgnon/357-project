@@ -106,7 +106,7 @@ export default function Login() {
 
               }}
               onClick={Login}
-              href="/account"
+              href="/disclaimer"
             >
               Sign In
             </Button>
@@ -120,6 +120,7 @@ export default function Login() {
                 background : "orange"
 
               }}
+              href="/disclaimer"
             >
               Sign In with Google
             </Button>

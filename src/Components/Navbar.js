@@ -24,6 +24,7 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import LogoutIcon from "@mui/icons-material/Logout";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ExploreIcon from '@mui/icons-material/Explore';
+import WalletIcon from '@mui/icons-material/Wallet';
 
 const drawerWidth = 300;
 
@@ -109,6 +110,16 @@ function Navbar(props) {
       >
         <List>
           <ListItem>
+            <ListItemButton style={{ borderRadius: "10px", color: "gray" }} href="/dashboard">
+              <ListItemIcon>
+                <WalletIcon />
+              </ListItemIcon>
+              <ListItemText primary="Connect a wallet" />
+            </ListItemButton>
+          </ListItem>
+        </List>
+        <List>
+          <ListItem>
             <ListItemButton style={{ borderRadius: "10px", color: "gray" }} href="/">
               <ListItemIcon>
                 <LogoutIcon />
@@ -149,7 +160,7 @@ function Navbar(props) {
           <div style={{display : "flex",width : "100%"}}>
             <Typography
               ml={"5px"}
-              fontSize={"35px"}
+              fontSize={"200%"}
               
               color={"black"}
               variant="h1"
@@ -166,7 +177,7 @@ function Navbar(props) {
                   borderRadius: "5px",
                   marginRight : "15px"
                 }}
-                placeholder="Search For Stocks and More"
+                placeholder="Search"
               />
             </div>
           </div>
