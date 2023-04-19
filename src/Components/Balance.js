@@ -17,7 +17,7 @@ function Balance() {
         <Box style={{ display: "flex" }}>
           <div
             style={{
-              borderRadius: "20px",
+              borderRadius: "10px",
               paddingInline: "40px",
               flex : "3",
               background: "orange",
@@ -27,11 +27,11 @@ function Balance() {
           </div>
           <div
             style={{
-              borderRadius: "20px",
+              borderRadius: "10px",
               paddingInline: "10px",
               textAlign:"center",
               marginLeft: "10px",
-              background: "#9eff9e"
+              background: "#C7FFA5"
             }}
           >
             <h4>+ 5.00%</h4>
@@ -41,28 +41,28 @@ function Balance() {
           <h3 style={{ fontWeight: "20px" }}>Invested</h3>
         </div>
 
-        <Box style={{ display: "flex", marginTop: "10px",background: "black",borderRadius : "20px" }}>
-          
-            <h4 style={{ color: "white",marginLeft : "40px" }}>$15,000</h4>
+        <Box style={{ display: "flex", marginTop: "10px",background: "black", borderRadius : "10px", justifyContent: "space-between" }}>
 
-            <div
-            style={{
-              borderRadius: "20px",
-              paddingBlock: "10px",
-              marginRight : "20px",
-              width: "100%",
-              display: "flex",
-              justifyContent : "flex-end",
-              alignItems:"center"
-            }}
-          >
-            <Button
-              style={{  background: "orange" }}
-              variant="contained"
-              endIcon={<ArrowForwardIcon />}
-            ></Button>
-          </div>
-        </Box>
+  <h4 style={{ color: "white",marginLeft : "40px" }}>$15,000</h4>
+
+  <div
+    style={{
+      borderRadius: "10px",
+      marginRight: "20px",
+      marginTop: "10px",
+      marginBottom: "10px",
+      width: "40px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      background: "orange",
+      marginLeft: "auto", 
+      padding: "8px"
+    }}
+  >
+    <ArrowForwardIcon style={{ color: "white" }} />
+  </div>
+</Box>
 
         <h4 style={{ color: "grey" }}>Top Stock</h4>
         <Box style={{ display: "flex" }}>

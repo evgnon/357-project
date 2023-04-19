@@ -11,7 +11,7 @@ const CatogoriesItem = () => {
         <img src={logo} alt="" style={{ maxWidth: "80px" }} />
         <Box>
           <Typography
-            style={{ marginLeft: "16px", color: "black",fontWeight :"250px" }}
+            style={{ marginLeft: "16px", color: "black",fontSize:"18px", marginTop:"10px" }}
             variant="h6"
           >
             Tesla

@@ -24,7 +24,8 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import LogoutIcon from "@mui/icons-material/Logout";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ExploreIcon from '@mui/icons-material/Explore';
-
+import WalletIcon from '@mui/icons-material/Wallet';
+import { NavLink } from 'react-router-dom';
 const drawerWidth = 300;
 
 function Navbar(props) {
@@ -49,23 +50,46 @@ function Navbar(props) {
           User Panel
         </Typography>
         <List>
-          <ListItem>
-            <ListItemButton
-              style={{ borderRadius: "10px" }}
-              sx={{ color: "#7E7D82" }}
-              href="/dashboard"
+          <ListItem
+          sx={{
+            '.active': {
+              background: '#F2FFE8',
+              color: '#7CC644',
+              '& .MuiListItemIcon-root': {
+                color: '#7CC644',
+              },
+            },
+            }}
             >
-              <ListItemIcon>
-                <DashboardIcon />
-              </ListItemIcon>
-              <ListItemText primary="Dashboard" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem>
-            <ListItemButton
+              <ListItemButton
+              component={NavLink}
+              to="/dashboard"
+              activeClassName="active"
               style={{ borderRadius: "10px" }}
               sx={{ color: "#7E7D82" }}
-              href="/account"
+  >
+    <ListItemIcon>
+      <DashboardIcon />
+    </ListItemIcon>
+    <ListItemText primary="Dashboard" />
+  </ListItemButton>
+</ListItem>
+          <ListItem
+          sx={{
+            '.active': {
+              background: '#F2FFE8',
+              color: '#7CC644',
+              '& .MuiListItemIcon-root': {
+                color: '#7CC644',
+              },
+            },
+            }}>
+            <ListItemButton
+            component={NavLink}
+              to="/account"
+              activeClassName="active"
+              style={{ borderRadius: "10px" }}
+              sx={{ color: "#7E7D82" }}
             >
               <ListItemIcon>
                 <AccountBalanceIcon />
@@ -73,11 +97,23 @@ function Navbar(props) {
               <ListItemText primary="My Account" />
             </ListItemButton>
           </ListItem>
-          <ListItem>
+          <ListItem
+          sx={{
+            '.active': {
+              background: '#F2FFE8',
+              color: '#7CC644',
+              '& .MuiListItemIcon-root': {
+                color: '#7CC644',
+              },
+            },
+            }}>
             <ListItemButton
+            component={NavLink}
+              to="/explore"
+              activeClassName="active"
               style={{ borderRadius: "10px" }}
               sx={{ color: "#7E7D82" }}
-              href="/explore"
+              
             >
               <ListItemIcon>
                 <ExploreIcon/>
@@ -85,11 +121,22 @@ function Navbar(props) {
               <ListItemText primary="Explore" />
             </ListItemButton>
           </ListItem>
-          <ListItem>
+          <ListItem
+          sx={{
+            '.active': {
+              background: '#F2FFE8',
+              color: '#7CC644',
+              '& .MuiListItemIcon-root': {
+                color: '#7CC644',
+              },
+            },
+            }}>
             <ListItemButton
+            component={NavLink}
+              to="/notification"
+              activeClassName="active"
               style={{ borderRadius: "10px" }}
               sx={{ color: "#7E7D82" }}
-              href="/notification"
             >
               <ListItemIcon>
                 <NotificationsIcon/>
@@ -107,6 +154,16 @@ function Navbar(props) {
           width: "100%",
         }}
       >
+        <List>
+          <ListItem>
+            <ListItemButton style={{ borderRadius: "10px", color: "gray" }} href="/dashboard">
+              <ListItemIcon>
+                <WalletIcon />
+              </ListItemIcon>
+              <ListItemText primary="Connect a wallet" />
+            </ListItemButton>
+          </ListItem>
+        </List>
         <List>
           <ListItem>
             <ListItemButton style={{ borderRadius: "10px", color: "gray" }} href="/">
@@ -149,7 +206,7 @@ function Navbar(props) {
           <div style={{display : "flex",width : "100%"}}>
             <Typography
               ml={"5px"}
-              fontSize={"35px"}
+              fontSize={"200%"}
               
               color={"black"}
               variant="h1"
@@ -166,7 +223,7 @@ function Navbar(props) {
                   borderRadius: "5px",
                   marginRight : "15px"
                 }}
-                placeholder="Search For Stocks and More"
+                placeholder="Search"
               />
             </div>
           </div>
