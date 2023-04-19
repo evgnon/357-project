@@ -147,7 +147,7 @@ function Navbar(props) {
               background: "rgb(247 241 241)",
               borderRadius: "5px",
             }}
-            placeholder="Search For Stocks and More"
+            placeholder="Search"
           />
         </Toolbar>
       </AppBar>

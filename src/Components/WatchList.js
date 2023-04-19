@@ -24,22 +24,22 @@ var stat = useRef(null)
       }}
     >
       <CardContent>
-        <Box style={{ display: "flex"}}>
-          
-          <h3 >Watch list</h3>
-          <Box style={{display : "flex",width : "100%", justifyContent : "flex-end"}}>
-            <IconButton
-              color="primary"
-              aria-label="upload picture"
-              component="label"
-              
-              style={{height : "40px", marginTop: "20px",color : "black",background : "orange",borderRadius : "10px" }}
-              
-            >
-              <AddIcon />
+      <Box style={{ display: "flex", alignItems: "center"}}>
+        <h3 style={{ marginRight: "auto" }}>Watch List</h3>
+        <IconButton
+        color="primary"
+        aria-label="upload picture"
+        component="label"
+        style={{
+          height: "40px",
+          marginLeft: "10px",
+          color: "black",
+          background: "orange",
+          borderRadius: "10px",
+          }}>
+            <AddIcon />
             </IconButton>
-          </Box>
-        </Box>
+            </Box>
         <div>
 
         <Carousel  ref={ref => (stat = ref)} itemsToShow={10} showArrows={false} style={{height : "390px"}} verticalMode>
