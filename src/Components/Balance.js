@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import { Box } from "@material-ui/core";
 import { Button } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/2.png";
 import LineChart from "./LineChart";
 
 function Balance() {
@@ -19,23 +19,22 @@ function Balance() {
             style={{
               borderRadius: "20px",
               paddingInline: "40px",
-              paddingBlock: "10px",
               flex : "3",
               background: "orange",
             }}
           >
-            <h5>$20,000</h5>
+            <h4>$20,000</h4>
           </div>
           <div
             style={{
               borderRadius: "20px",
               paddingInline: "10px",
-              paddingBlock: "10px",
+              textAlign:"center",
               marginLeft: "10px",
               background: "#9eff9e"
             }}
           >
-            <h5>+5.00%</h5>
+            <h4>+ 5.00%</h4>
           </div>
         </Box>
         <div style={{ marginTop: "20px" }}>
@@ -44,16 +43,17 @@ function Balance() {
 
         <Box style={{ display: "flex", marginTop: "10px",background: "black",borderRadius : "20px" }}>
           
-            <h5 style={{ color: "white",marginLeft : "40px" }}>$15,000</h5>
+            <h4 style={{ color: "white",marginLeft : "40px" }}>$15,000</h4>
 
             <div
             style={{
               borderRadius: "20px",
               paddingBlock: "10px",
-              marginRight : "10px",
+              marginRight : "20px",
               width: "100%",
               display: "flex",
-              justifyContent : "flex-end"
+              justifyContent : "flex-end",
+              alignItems:"center"
             }}
           >
             <Button
