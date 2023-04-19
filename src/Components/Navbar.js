@@ -21,7 +21,9 @@ import SearchBar from "material-ui-search-bar";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import LogoutIcon from '@mui/icons-material/Logout';
+import LogoutIcon from "@mui/icons-material/Logout";
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import ExploreIcon from '@mui/icons-material/Explore';
 
 const drawerWidth = 300;
 
@@ -40,7 +42,6 @@ function Navbar(props) {
 
         <Typography
           variant="h6"
-          
           fontWeight={"1200px"}
           mx={"25px"}
           color={"#7E7D82"}
@@ -52,6 +53,7 @@ function Navbar(props) {
             <ListItemButton
               style={{ borderRadius: "10px" }}
               sx={{ color: "#7E7D82" }}
+              href="/dashboard"
             >
               <ListItemIcon>
                 <DashboardIcon />
@@ -63,6 +65,7 @@ function Navbar(props) {
             <ListItemButton
               style={{ borderRadius: "10px" }}
               sx={{ color: "#7E7D82" }}
+              href="/account"
             >
               <ListItemIcon>
                 <AccountBalanceIcon />
@@ -74,11 +77,24 @@ function Navbar(props) {
             <ListItemButton
               style={{ borderRadius: "10px" }}
               sx={{ color: "#7E7D82" }}
+              href="/explore"
             >
               <ListItemIcon>
-                <AttachMoneyIcon />
+                <ExploreIcon/>
               </ListItemIcon>
-              <ListItemText primary="Dividend" />
+              <ListItemText primary="Explore" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton
+              style={{ borderRadius: "10px" }}
+              sx={{ color: "#7E7D82" }}
+              href="/notification"
+            >
+              <ListItemIcon>
+                <NotificationsIcon/>
+              </ListItemIcon>
+              <ListItemText primary="Notification" />
             </ListItemButton>
           </ListItem>
         </List>
@@ -92,11 +108,10 @@ function Navbar(props) {
         }}
       >
         <List>
-          <ListItem >
-            <ListItemButton style={{ borderRadius: "10px", color: "gray" }}>
+          <ListItem>
+            <ListItemButton style={{ borderRadius: "10px", color: "gray" }} href="/">
               <ListItemIcon>
-                <LogoutIcon/>
-                
+                <LogoutIcon />
               </ListItemIcon>
               <ListItemText primary="Logout" />
             </ListItemButton>
@@ -130,25 +145,32 @@ function Navbar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            ml={"5px"}
-            fontSize={"35px"}
-            padding={"10px"}
-            color={"black"}
-            variant="h1"
-          >
-            Hello Mubashir,
-          </Typography>
-          <SearchBar
-            style={{
-              position: "absolute",
-              height: "37.6px",
-              right: "250px",
-              background: "rgb(247 241 241)",
-              borderRadius: "5px",
-            }}
-            placeholder="Search"
-          />
+
+          <div style={{display : "flex",width : "100%"}}>
+            <Typography
+              ml={"5px"}
+              fontSize={"35px"}
+              
+              color={"black"}
+              variant="h1"
+              
+            >
+              Hello Mubashir,
+            </Typography>
+
+            <div style={{display : "flex",width : "80%", justifyContent : "flex-end"}}> 
+              <SearchBar
+                style={{
+                  height: "37.6px",
+                  background: "rgb(251 251 251)",
+                  borderRadius: "5px",
+                  marginRight : "15px"
+                }}
+                placeholder="Search For Stocks and More"
+              />
+            </div>
+          </div>
+
         </Toolbar>
       </AppBar>
       <Box
@@ -198,7 +220,7 @@ function Navbar(props) {
           flexGrow: 1,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           background: "rgb(247 241 241)",
-          minHeight: "850px"
+          minHeight: "850px",
         }}
       >
         <Toolbar />

@@ -8,7 +8,7 @@ import WatchList from "../Components/WatchList";
 import Limit from "../Components/Limit"
 import Portfolio from "../Components/Portfolio";
 import Limit2 from "../Components/Limit2";
-const Home = () => {
+const Account= () => {
   return (
     <Grid spacing={2}>
       <Grid item xs={12} style={{ padding: "20px" }}>
@@ -37,10 +37,9 @@ const Home = () => {
       <Grid item xs={12} sm={4}>
         <Limit/>
         <Limit2/>
-
       </Grid>
       </Grid>
     </Grid>
   );
 };
-export default Home;
+export default Account;
