@@ -8,6 +8,7 @@ import Explore from "./Page/Explore";
 import Register from "./Page/Register";
 import Disclaimer from "./Page/Disclaimer";
 import Notification from "./Page/Notification";
+import Schedule from "./Page/Schedule";
 function App() {
   return (
     <>
@@ -55,7 +56,16 @@ function App() {
               </>
             }
           />
-
+           <Route
+            path="/schedule"
+            element={
+              <>
+                <Navbar>
+                <Schedule/>
+                </Navbar>
+              </>
+            }
+          />
 
           
           
