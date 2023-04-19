@@ -22,6 +22,8 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import LogoutIcon from "@mui/icons-material/Logout";
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import ExploreIcon from '@mui/icons-material/Explore';
 
 const drawerWidth = 300;
 
@@ -51,6 +53,7 @@ function Navbar(props) {
             <ListItemButton
               style={{ borderRadius: "10px" }}
               sx={{ color: "#7E7D82" }}
+              href="/dashboard"
             >
               <ListItemIcon>
                 <DashboardIcon />
@@ -62,6 +65,7 @@ function Navbar(props) {
             <ListItemButton
               style={{ borderRadius: "10px" }}
               sx={{ color: "#7E7D82" }}
+              href="/account"
             >
               <ListItemIcon>
                 <AccountBalanceIcon />
@@ -73,11 +77,24 @@ function Navbar(props) {
             <ListItemButton
               style={{ borderRadius: "10px" }}
               sx={{ color: "#7E7D82" }}
+              href="/explore"
             >
               <ListItemIcon>
-                <AttachMoneyIcon />
+                <ExploreIcon/>
               </ListItemIcon>
-              <ListItemText primary="Dividend" />
+              <ListItemText primary="Explore" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton
+              style={{ borderRadius: "10px" }}
+              sx={{ color: "#7E7D82" }}
+              href="/notification"
+            >
+              <ListItemIcon>
+                <NotificationsIcon/>
+              </ListItemIcon>
+              <ListItemText primary="Notification" />
             </ListItemButton>
           </ListItem>
         </List>
@@ -92,7 +109,7 @@ function Navbar(props) {
       >
         <List>
           <ListItem>
-            <ListItemButton style={{ borderRadius: "10px", color: "gray" }}>
+            <ListItemButton style={{ borderRadius: "10px", color: "gray" }} href="/">
               <ListItemIcon>
                 <LogoutIcon />
               </ListItemIcon>

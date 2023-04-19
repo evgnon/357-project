@@ -80,7 +80,7 @@ const Disclaimer = () => {
           />
           <Box style={{ display: "flex",marginTop : "50px",marginBottom : "50px" }}>
             <Button variant="contained" style={{background : "orange",height : "50px",marginRight : "320px",width : "180px"}}>Refuse</Button>
-            <Button variant="contained" style={{background : "#27c727",height : "50px",width : "180px"}}>Accept</Button>
+            <Button variant="contained" style={{background : "#27c727",height : "50px",width : "180px"}} href="/dashboard">Accept</Button>
           </Box>
         </Box>
       </Box>

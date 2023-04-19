@@ -48,7 +48,7 @@ const ExploreStock2 = () => {
             clicked
             variant="contained"
           >
-            Schedule
+            Back
           </Button>
         </Box>
 

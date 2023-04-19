@@ -9,6 +9,7 @@ import Register from "./Page/Register";
 import Disclaimer from "./Page/Disclaimer";
 import Notification from "./Page/Notification";
 import Schedule from "./Page/Schedule";
+import Dashboard from "./Page/Dashboard";
 function App() {
   return (
     <>
@@ -66,7 +67,16 @@ function App() {
               </>
             }
           />
-
+          <Route
+            path="/dashboard"
+            element={
+              <>
+                <Navbar>
+                  <Dashboard/>
+                </Navbar>
+              </>
+            }
+          />
           
           
 

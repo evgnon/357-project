@@ -14,7 +14,6 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import logo from "../Assets/logo.png";
 
-
 const theme = createTheme();
 
 export default function Register() {
@@ -39,9 +38,13 @@ export default function Register() {
             alignItems: "center",
           }}
         >
-          <img style={{height : "250px",width : "350px"}} src={logo} alt="" />
+          <img style={{ height: "250px", width: "350px" }} src={logo} alt="" />
 
-          <Typography component="h1" variant="h5" style={{marginTop : "20px",textDecoration : "bold"}}>
+          <Typography
+            component="h1"
+            variant="h5"
+            style={{ marginTop: "20px", textDecoration: "bold" }}
+          >
             Sign up
           </Typography>
           <Box
@@ -58,7 +61,6 @@ export default function Register() {
               label="First Name"
               name="Name"
               autoComplete="email"
-              
             />
             <TextField
               margin="normal"
@@ -68,7 +70,6 @@ export default function Register() {
               label="Last Name"
               name="Name"
               autoComplete="email"
-              
             />
             <TextField
               margin="normal"
@@ -79,8 +80,6 @@ export default function Register() {
               name="email"
               autoComplete="email"
               autoFocus
-              
-              
             />
             <TextField
               margin="normal"
@@ -92,32 +91,33 @@ export default function Register() {
               id="password"
               autoComplete="current-password"
             />
-            
+
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              style ={{
-
-                background : "#0dab0d"
-
+              style={{
+                background: "#0dab0d",
               }}
+              href="/disclaimer"
             >
               Sign Up
             </Button>
 
             <Grid container>
-              
-              <Grid item style={{marginLeft : "90px"}}>
-                <Link href="/" variant="subtitle2" style={{textDecoration : "none",color : "black"}}>
+              <Grid item style={{ marginLeft: "90px" }}>
+                <Link
+                  href="/"
+                  variant="subtitle2"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
                   {"Have an account? Log in"}
                 </Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
-      
       </Container>
     </ThemeProvider>
   );

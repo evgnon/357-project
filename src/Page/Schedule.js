@@ -30,7 +30,7 @@ const Schedule = () => {
         </Button>
       </Box>
     </Box>
-      <Grid container item xs={12} spacing={6} style={{ padding: "20px",marginLeft: "20px"}}>
+      <Grid container item xs={12} spacing={6} style={{ padding: "20px",marginLeft: "20px",width : "100%"}}>
         <Grid item xs={12} sm={6} >
           <ExploreStock2 />
         </Grid>
