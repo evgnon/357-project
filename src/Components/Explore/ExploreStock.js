@@ -47,6 +47,7 @@ const ExploreStock = () => {
             style={{ color: "white", fontSize: "15px", background: "#df950e" }}
             clicked
             variant="contained"
+            href="/schedule"
           >
             Schedule
           </Button>
@@ -118,19 +119,19 @@ const ExploreStock = () => {
                 justifySelf: "flex-end",
                 height: "35px",
               }}
-            //   clicked
+              //   clicked
               variant="contained"
             >
               Buy Tesla
             </Button>
           </Box>
         </Box>
-        <Box style={{ display: "flex", width: "100%",marginTop :"10px" }}>
+        <Box style={{ display: "flex", width: "100%", marginTop: "10px" }}>
           <Box>
-            
-            <h2 style={{marginBottom :"0px"}}>37,856.74<span style={{fontSize :"10px",color :"grey",marginLeft :"5px"}}>CAD</span></h2>
-            <span style={{marginTop : "0px",fontWeight : "10px",fontSize : "12px",color : "#ff0000"}}>+11,157.39(41.79%)</span>
-            
+
+            <h2 style={{ marginBottom: "0px" }}>37,856.74<span style={{ fontSize: "10px", color: "grey", marginLeft: "5px" }}>CAD</span></h2>
+            <span style={{ marginTop: "0px", fontWeight: "10px", fontSize: "12px", color: "#ff0000" }}>+11,157.39(41.79%)</span>
+
           </Box>
 
           <Box
@@ -139,14 +140,14 @@ const ExploreStock = () => {
               marginTop: "10px",
               width: "100%",
               justifyContent: "flex-end",
-              marginTop : "25px"
+              marginTop: "25px"
             }}
           >
             <Button
               style={{
                 color: "white",
                 fontSize: "15px",
-                background :"#9090ff",
+                background: "#9090ff",
                 justifySelf: "flex-end",
                 height: "35px",
               }}

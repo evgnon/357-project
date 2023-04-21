@@ -17,8 +17,11 @@ import UserData from "../Data/UserData";
 import { redirect } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useEffect, useState } from "react";
-import { auth, signInWithEmailAndPassword, signInWithGoogle } from "../firebase";
 import { useNavigate } from "react-router-dom";
+import { auth, db, googleProvider } from "../firebase";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { addDoc, query, getDocs, where, collection } from "firebase/firestore";
+
 
 const theme = createTheme();
 
@@ -95,7 +98,14 @@ export default function Login() {
                 background: "#0dab0d"
 
               }}
-              onClick={() => signInWithEmailAndPassword(email, password)}
+              onClick={async () => {
+                try {
+                  await signInWithEmailAndPassword(auth, email, password);
+                } catch (err) {
+                  console.error(err);
+                  alert(err.message);
+                }
+              }}
               href="/account"
             >
               Sign In
@@ -110,7 +120,26 @@ export default function Login() {
                 background: "orange"
 
               }}
-              onClick={signInWithGoogle}
+              onClick={async () => {
+                try {
+                  const res = await signInWithPopup(auth, googleProvider);
+                  const user = res.user;
+                  const q = query(collection(db, "users"), where("uid", "==", user.uid));
+                  const docs = await getDocs(q);
+                  if (docs.docs.length === 0) {
+                    await addDoc(collection(db, "users"), {
+                      uid: user.uid,
+                      firstName: user.firstName,
+                      lastName: user.lastName,
+                      authProvider: "google",
+                      email: user.email,
+                    });
+                  }
+                } catch (err) {
+                  console.error(err);
+                  alert(err.message);
+                }
+              }}
             >
               Sign In with Google
             </Button>

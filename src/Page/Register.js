@@ -15,8 +15,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import logo from "../Assets/logo.png";
 import { useState, useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, registerWithEmailAndPassword, signInWithGoogle } from "../firebase";
-
+import { auth, db } from "../firebase";
+import { addDoc, collection } from "firebase/firestore";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const theme = createTheme();
 
@@ -27,14 +28,27 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
 
-  const register = () => {
-    registerWithEmailAndPassword(firstName, lastName, email, password);
+  const register = async () => {
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      const user = res.user;
+      await addDoc(collection(db, "users"), {
+        uid: user.uid,
+        firstName: firstName,
+        lastName: lastName,
+        authProvider: "local",
+        email,
+      });
+    } catch (err) {
+      console.error(err);
+      alert(err.message);
+    }
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const response = await registerWithEmailAndPassword(email, password);
+    const response = register;
 
     setEmail("");
     setPassword("");
@@ -68,25 +82,25 @@ export default function Register() {
             sx={{ mt: 1 }}
           >
             <input
-              type="text"
+              margin="normal"
               required
               fullWidth
               id="Name"
               label="First Name"
               name="Name"
+              autoComplete="email"
               value={firstName}
-              autoComplete="First Name"
               onChange={(e) => setFirstName(e.target.value)}
             />
             <input
-              type="text"
+              margin="normal"
               required
               fullWidth
               id="Name"
               label="Last Name"
               name="Name"
+              autoComplete="email"
               value={lastName}
-              autoComplete="Last Name"
               onChange={(e) => setLastName(e.target.value)}
             />
             <TextField
