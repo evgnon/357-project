@@ -17,7 +17,7 @@ import UserData from "../Data/UserData";
 import { redirect } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useEffect, useState } from "react";
-import { auth, signInWithEmailAndPassword, signInWithGoogle } from "../firebase";
+import { auth, signInWithEmailAndPassword, signInWithGoogle } from "../Api/firebase";
 import { useNavigate } from "react-router-dom";
 
 const theme = createTheme();

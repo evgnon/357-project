@@ -8,22 +8,23 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Box } from "@mui/material";
 import logo from "../../Assets/logo.png";
-function createData(name, Marketcap, Balance, Price, Day7,Day30,Year1,Today) {
-  return { name, Marketcap, Balance, Price, Day7,Day30,Year1,Today};
+function createData(name, Marketcap, Balance, Price, Day7, Day30, Year1, Today) {
+  return { name, Marketcap, Balance, Price, Day7, Day30, Year1, Today };
 }
 
 const rows = [
-  createData("Bitocoin", "20B", "$5,777" , 0.000038, "+5.1%","-27.4%","+1M%","+7.7%"),
-  createData("Bitocoin", "20B", "$5,777" , 0.000038, "+5.1%","-27.4%","+1M%","+7.7%"),
-  createData("Bitocoin", "20B", "$5,777" , 0.000038, "+5.1%","-27.4%","+1M%","+7.7%"),
-  createData("Bitocoin", "20B", "$5,777" , 0.000038, "+5.1%","-27.4%","+1M%","+7.7%"),
-  createData("Bitocoin", "20B", "$5,777" , 0.000038, "+5.1%","-27.4%","+1M%","+7.7%"),
-  createData("Bitocoin", "20B", "$5,777" , 0.000038, "+5.1%","-27.4%","+1M%","+7.7%"),
-  createData("Bitocoin", "20B", "$5,777" , 0.000038, "+5.1%","-27.4%","+1M%","+7.7%"),
-  
+  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+
 ];
 
 export default function Table1() {
+
   return (
     <TableContainer component={Paper}>
       <Table
@@ -43,9 +44,9 @@ export default function Table1() {
                 fontWeight: "500px",
               }}
             >
-      
-                Name
-             
+
+              Name
+
             </TableCell>
             <TableCell
               align="left"
@@ -140,12 +141,12 @@ export default function Table1() {
                   fontWeight: "500px",
                   borderTop: "1px solid grey",
                   borderBottom: "1px solid grey",
-                  color : "grey"
-                  
+                  color: "grey"
+
                 }}
               >
                 <Box style={{ display: "flex" }}>
-                  <img style={{width : "90px"}}src={logo} alt="" />
+                  <img style={{ width: "90px" }} src={logo} alt="" />
                   {row.name}
                 </Box>
               </TableCell>

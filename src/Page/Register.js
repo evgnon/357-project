@@ -15,7 +15,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import logo from "../Assets/logo.png";
 import { useState, useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, registerWithEmailAndPassword, signInWithGoogle } from "../firebase";
+import { auth, registerWithEmailAndPassword, signInWithGoogle } from "../Api/firebase";
 
 
 const theme = createTheme();
