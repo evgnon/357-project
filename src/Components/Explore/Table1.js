@@ -8,20 +8,20 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Box } from "@mui/material";
 
-import logo from "../../Assets/1.png";
+import logo from "../../Assets/2.png";
 function createData(name, Marketcap, Balance, Price, Day7,Day30,Year1,Today) {
   return { name, Marketcap, Balance, Price, Day7,Day30,Year1,Today};
 
 }
 
 const rows = [
-  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
-  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
-  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
-  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
-  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
-  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
-  createData("Bitocoin", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Tesla", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Tesla", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Tesla", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Tesla", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Tesla", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Tesla", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
+  createData("Tesla", "20B", "$5,777", 0.000038, "+5.1%", "-27.4%", "+1M%", "+7.7%"),
 
 ];
 

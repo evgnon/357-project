@@ -3,8 +3,6 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { Link } from 'react-router-dom';
 import {
-  LineChart,
-  Line,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -13,12 +11,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { Button } from "@mui/material";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 import { AreaChart, Area } from "recharts";
 import { Box } from "@mui/material";
 import data3 from "../../Data/data3";
-import { Divider } from "@mui/material";
 import logo from "../../Assets/2.png";
 
 const ExploreStock2 = () => {
