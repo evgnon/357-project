@@ -1,40 +1,42 @@
 import * as React from "react";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import logo from "../Assets/logo.png";
 import UserData from "../Data/UserData";
-import { redirect } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useEffect, useState } from "react";
-import { auth, signInWithEmailAndPassword, signInWithGoogle } from "../Api/firebase";
-import { useNavigate } from "react-router-dom";
 
 const theme = createTheme();
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [user, loading, error] = useAuthState(auth);
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    if (loading) {
-      // maybe trigger a loading screen
-      return;
-    }
-    if (user) navigate("/dashboard");
-  }, [user, loading]);
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get("email"),
+      password: data.get("password"),
+    });
+    
+    var loggedIn = false
+    UserData.map((element) => {
+      console.log(element)
+      if(element.email === data.get("email") && element.password === data.get("password")){
+    
+        return 
+      }
+
+    })
+   
+    
+
+  };
 
 
   return (
@@ -49,17 +51,18 @@ export default function Login() {
             alignItems: "center",
           }}
         >
-          <img style={{ height: "250px", width: "350px" }} src={logo} alt="" />
+          <img style={{height : "250px",width : "350px"}} src={logo} alt="" />
 
-          <Typography component="h1" variant="h5" style={{ marginTop: "20px", textDecoration: "bold" }}>
+          <Typography component="h1" variant="h5" style={{marginTop : "20px",textDecoration : "bold"}}>
             Log in
           </Typography>
           <Box
             component="form"
+            onSubmit={handleSubmit}
             noValidate
             sx={{ mt: 1 }}
           >
-            <input
+            <TextField
               margin="normal"
               required
               fullWidth
@@ -68,11 +71,11 @@ export default function Login() {
               name="email"
               autoComplete="email"
               autoFocus
-              onChange={(e) => setEmail(e.target.value)}
-
-
+              
+              
+              
             />
-            <input
+            <TextField
               margin="normal"
               required
               fullWidth
@@ -81,24 +84,21 @@ export default function Login() {
               type="password"
               id="password"
               autoComplete="current-password"
-              onChange={(e) => setPassword(e.target.value)}
-
+              
             />
-
+            
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              style={{
+              style ={{
 
-                background: "#0dab0d"
+                background : "#0dab0d"
 
               }}
-
               onClick={Login}
               href="/disclaimer"
-
             >
               Sign In
             </Button>
@@ -107,27 +107,25 @@ export default function Login() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              style={{
+              style ={{
 
-                background: "orange"
+                background : "orange"
 
               }}
-
               href="/disclaimer"
-
             >
               Sign In with Google
             </Button>
             <Grid container>
-              <Grid item style={{ marginLeft: "90px" }}>
-                <Link href="/register" variant="subtitle2" style={{ textDecoration: "none", color: "black" }}>
+              <Grid item style={{marginLeft : "90px"}}>
+                <Link href="/register" variant="subtitle2" style={{textDecoration : "none",color : "black"}}>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
-
+      
       </Container>
     </ThemeProvider>
   );

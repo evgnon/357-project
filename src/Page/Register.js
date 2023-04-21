@@ -1,45 +1,26 @@
 import * as React from "react";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import logo from "../Assets/logo.png";
-import { useState, useEffect } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, registerWithEmailAndPassword, signInWithGoogle } from "../Api/firebase";
-
 
 const theme = createTheme();
 
 export default function Register() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [user, loading, error] = useAuthState(auth);
-
-  const register = () => {
-    registerWithEmailAndPassword(firstName, lastName, email, password);
-  }
-
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const response = await registerWithEmailAndPassword(email, password);
-
-    setEmail("");
-    setPassword("");
+    console.log({
+      email: data.get("email"),
+      password: data.get("password"),
+    });
   };
-
 
   return (
     <ThemeProvider theme={theme}>
@@ -58,59 +39,53 @@ export default function Register() {
           <Typography
             component="h1"
             variant="h5"
-            style={{ marginTop: "20px", textDecoration: "bold" }}
+            style={{ textDecoration: "bold" }}
           >
             Sign up
           </Typography>
           <Box
             component="form"
+            onSubmit={handleSubmit}
             noValidate
             sx={{ mt: 1 }}
           >
-            <input
-              type="text"
+            <TextField
+              margin="normal"
               required
               fullWidth
               id="Name"
               label="First Name"
               name="Name"
-              value={firstName}
-              autoComplete="First Name"
-              onChange={(e) => setFirstName(e.target.value)}
+              autoComplete="email"
             />
-            <input
-              type="text"
+            <TextField
+              margin="normal"
               required
               fullWidth
               id="Name"
               label="Last Name"
               name="Name"
-              value={lastName}
-              autoComplete="Last Name"
-              onChange={(e) => setLastName(e.target.value)}
+              autoComplete="email"
             />
             <TextField
-              type="text"
+              margin="normal"
               required
               fullWidth
               id="email"
               label="Email Address"
               name="email"
-              value={email}
               autoComplete="email"
               autoFocus
-              onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
-              type="password"
+              margin="normal"
               required
               fullWidth
               name="password"
-              value={password}
               label="Password"
+              type="password"
               id="password"
               autoComplete="current-password"
-              onChange={(e) => setPassword(e.target.value)}
             />
 
             <Button
@@ -121,14 +96,13 @@ export default function Register() {
               style={{
                 background: "#0dab0d",
               }}
-              onClick={register}
               href="/disclaimer"
             >
               Sign Up
             </Button>
 
             <Grid container>
-              <Grid item style={{ marginLeft: "90px" }}>
+              <Grid item style={{ marginLeft: "90px", marginBottom:"50px" }}>
                 <Link
                   href="/"
                   variant="subtitle2"
