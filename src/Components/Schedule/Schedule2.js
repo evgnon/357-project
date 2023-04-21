@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Box } from "@mui/material";
 import { Card, CardContent, Typography } from "@material-ui/core";
-import logo from "../../Assets/logo.png";
+import logo from "../../Assets/Bitcoin.png";
 import { ResponsiveContainer } from "recharts";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -38,6 +38,7 @@ const Schedule2 = () => {
         borderRadius: "20px",
         marginRight: "20px",
         background: "white",
+        width:"130%"
       }}
     >
       <CardContent>
@@ -98,8 +99,10 @@ const Schedule2 = () => {
                   We will not advise you of this transaction beforehand. Your
                   selection is the sole authorization of this
                 </h6>
+
                 <Button variant="contained" style={{ background: "orange", width: "150px" }} onClick={() => sellAction(target, quantity)}>Sell</Button>
                 <Button variant="contained" style={{ background: "rgb(144, 144, 255)", width: "150px", marginTop: "20px" }} onClick={() => buyAction(target, quantity)}>Purchase</Button>
+
               </Box>
 
 

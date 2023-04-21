@@ -6,7 +6,7 @@ import Carousel from "react-elastic-carousel";
 import AddIcon from "@mui/icons-material/Add";
 import "../../Style/crousel.css"
 import CatogeriesItem from "./CatogoriesItem";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 const Catogories= () => {
 var stat = useRef(null)
@@ -15,9 +15,9 @@ var stat = useRef(null)
     <Card
       style={{
         borderRadius: "20px",
-        marginRight: "20px",
+        marginLeft: "70px",
         padding: "10px",
-        width : "100%"
+        width : "80%"
       }}
     >
       <CardContent>
@@ -49,10 +49,10 @@ var stat = useRef(null)
               color="primary"
               aria-label="upload picture"
               component="label"
-              style={{ marginTop: "12px",background: "#a3ffa3",color :"orange" }}
+              style={{ marginTop: "12px",background: "orange",color :"black" }}
               onClick={() => {stat.slideNext()}}
               >
-              <KeyboardArrowDownIcon/>
+              <ArrowDownwardIcon />
             </IconButton>
         </Box>
 

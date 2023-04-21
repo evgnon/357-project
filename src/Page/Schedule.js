@@ -5,7 +5,7 @@ import ExploreStock2 from "../Components/Schedule/ExploreStock2";
 import Grid from "@mui/material/Grid";
 import Schedule2 from "../Components/Schedule/Schedule2"
 
-
+import { Link } from 'react-router-dom';
 
 const Schedule = () => {
 
@@ -15,25 +15,25 @@ const Schedule = () => {
         <h1
           style={{ fontSize: "40px", marginBottom: "0px", marginLeft: "100px" }}
         >
-          Schedule
-        </h1>
-        <Box
-          style={{ display: "flex", justifyContent: "flex-end", width: "100%" }}
-        >
-          <Button
-            variant="contained"
-            style={{
+
+        <Link to="/explore">
+        <Button
+          variant="contained"
+          style={{
+
               width: "120px",
-              background: "orange",
+              background: "#FF5C00",
               height: "30px",
               marginTop: "40px",
               marginRight: "90px",
             }}
-            href="/explore"
-          >
-            Back
-          </Button>
-        </Box>
+
+
+        >
+          Back
+        </Button>
+        </Link>
+
       </Box>
       <Grid container item xs={12} spacing={6} style={{ padding: "20px", marginLeft: "20px", width: "100%" }}>
         <Grid item xs={12} sm={6} >

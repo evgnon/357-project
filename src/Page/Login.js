@@ -98,6 +98,7 @@ export default function Login() {
                 background: "#0dab0d"
 
               }}
+
               onClick={async () => {
                 try {
                   await signInWithEmailAndPassword(auth, email, password);
@@ -106,7 +107,9 @@ export default function Login() {
                   alert(err.message);
                 }
               }}
-              href="/account"
+
+              href="/disclaimer"
+
             >
               Sign In
             </Button>
@@ -120,6 +123,7 @@ export default function Login() {
                 background: "orange"
 
               }}
+
               onClick={async () => {
                 try {
                   const res = await signInWithPopup(auth, googleProvider);
@@ -140,6 +144,8 @@ export default function Login() {
                   alert(err.message);
                 }
               }}
+   href="/disclaimer"
+
             >
               Sign In with Google
             </Button>
