@@ -13,18 +13,33 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import logo from "../Assets/logo.png";
+import { useState, useEffect } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth, registerWithEmailAndPassword, signInWithGoogle } from "../firebase";
+
 
 const theme = createTheme();
 
 export default function Register() {
-  const handleSubmit = (event) => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+
+  const register = () => {
+    registerWithEmailAndPassword(firstName, lastName, email, password);
+  }
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    const response = await registerWithEmailAndPassword(email, password);
+
+    setEmail("");
+    setPassword("");
   };
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -49,47 +64,53 @@ export default function Register() {
           </Typography>
           <Box
             component="form"
-            onSubmit={handleSubmit}
             noValidate
             sx={{ mt: 1 }}
           >
-            <TextField
-              margin="normal"
+            <input
+              type="text"
               required
               fullWidth
               id="Name"
               label="First Name"
               name="Name"
-              autoComplete="email"
+              value={firstName}
+              autoComplete="First Name"
+              onChange={(e) => setFirstName(e.target.value)}
             />
-            <TextField
-              margin="normal"
+            <input
+              type="text"
               required
               fullWidth
               id="Name"
               label="Last Name"
               name="Name"
-              autoComplete="email"
+              value={lastName}
+              autoComplete="Last Name"
+              onChange={(e) => setLastName(e.target.value)}
             />
             <TextField
-              margin="normal"
+              type="text"
               required
               fullWidth
               id="email"
               label="Email Address"
               name="email"
+              value={email}
               autoComplete="email"
               autoFocus
+              onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
-              margin="normal"
+              type="password"
               required
               fullWidth
               name="password"
+              value={password}
               label="Password"
-              type="password"
               id="password"
               autoComplete="current-password"
+              onChange={(e) => setPassword(e.target.value)}
             />
 
             <Button
@@ -100,6 +121,7 @@ export default function Register() {
               style={{
                 background: "#0dab0d",
               }}
+              onClick={register}
               href="/disclaimer"
             >
               Sign Up
