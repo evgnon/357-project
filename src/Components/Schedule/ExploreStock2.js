@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
+import { Link } from 'react-router-dom';
 import {
   LineChart,
   Line,
@@ -18,7 +19,7 @@ import { AreaChart, Area } from "recharts";
 import { Box } from "@mui/material";
 import data3 from "../../Data/data3";
 import { Divider } from "@mui/material";
-import logo from "../../Assets/logo.png";
+import logo from "../../Assets/2.png";
 
 const ExploreStock2 = () => {
   return (
@@ -41,15 +42,17 @@ const ExploreStock2 = () => {
           </Button>
 
           <Button style={{ color: "grey", fontSize: "15px" }}>SSE</Button>
-          <Button style={{ color: "grey", fontSize: "15px" }}>Euronext</Button>
+          <Button style={{ color: "grey", fontSize: "15px" }}>EURO</Button>
           <Button style={{ color: "grey", fontSize: "15px" }}>BSE</Button>
+          <Link to="/explore">
           <Button
-            style={{ color: "white", fontSize: "15px", background: "#df950e" }}
+            style={{ color: "white", fontSize: "15px", background: "#FF5C00" }}
             clicked
             variant="contained"
           >
             Back
           </Button>
+          </Link>
         </Box>
 
         <Box
@@ -114,7 +117,7 @@ const ExploreStock2 = () => {
               style={{
                 color: "white",
                 fontSize: "15px",
-                background: "#df950e",
+                background: "#7CC644",
                 justifySelf: "flex-end",
                 height: "35px",
               }}
@@ -146,7 +149,7 @@ const ExploreStock2 = () => {
               style={{
                 color: "white",
                 fontSize: "15px",
-                background :"#9090ff",
+                background :"#00CAF6",
                 justifySelf: "flex-end",
                 height: "35px",
               }}

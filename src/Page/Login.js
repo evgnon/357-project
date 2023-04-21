@@ -95,8 +95,10 @@ export default function Login() {
                 background: "#0dab0d"
 
               }}
-              onClick={() => signInWithEmailAndPassword(email, password)}
-              href="/account"
+
+              onClick={Login}
+              href="/disclaimer"
+
             >
               Sign In
             </Button>
@@ -110,7 +112,9 @@ export default function Login() {
                 background: "orange"
 
               }}
-              onClick={signInWithGoogle}
+
+              href="/disclaimer"
+
             >
               Sign In with Google
             </Button>

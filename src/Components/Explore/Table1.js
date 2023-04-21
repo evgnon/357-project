@@ -7,9 +7,11 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Box } from "@mui/material";
-import logo from "../../Assets/logo.png";
-function createData(name, Marketcap, Balance, Price, Day7, Day30, Year1, Today) {
-  return { name, Marketcap, Balance, Price, Day7, Day30, Year1, Today };
+
+import logo from "../../Assets/1.png";
+function createData(name, Marketcap, Balance, Price, Day7,Day30,Year1,Today) {
+  return { name, Marketcap, Balance, Price, Day7,Day30,Year1,Today};
+
 }
 
 const rows = [
@@ -29,7 +31,7 @@ export default function Table1() {
     <TableContainer component={Paper}>
       <Table
         sx={{ minWidth: 650 }}
-        style={{ maxHeight: "100px" }}
+        style={{ maxHeight: "100px"}}
         size="small"
         aria-label="a dense table"
       >
@@ -146,9 +148,11 @@ export default function Table1() {
                 }}
               >
                 <Box style={{ display: "flex" }}>
-                  <img style={{ width: "90px" }} src={logo} alt="" />
-                  {row.name}
-                </Box>
+
+                  <img style={{width : "90px"}}src={logo} alt="" />
+                  <Box style={{ paddingTop: "7px" }}>{row.name}</Box>
+                  </Box>
+
               </TableCell>
               <TableCell
                 align="left"
