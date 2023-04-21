@@ -1,0 +1,1 @@
+const alphaKey = 'DD7AX4WYO8R9IU34';

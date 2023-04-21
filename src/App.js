@@ -10,19 +10,21 @@ import Disclaimer from "./Page/Disclaimer";
 import Notification from "./Page/Notification";
 import Schedule from "./Page/Schedule";
 import Dashboard from "./Page/Dashboard";
+
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Login />} />
-          <Route exact path="/register" element={<Register/>} />
+          <Route exact path="/register" element={<Register />} />
           <Route
             path="/account"
             element={
               <>
                 <Navbar>
-                <Account />
+                  <Account />
                 </Navbar>
               </>
             }
@@ -32,7 +34,7 @@ function App() {
             element={
               <>
                 <Navbar>
-                <Explore />
+                  <Explore />
                 </Navbar>
               </>
             }
@@ -41,9 +43,9 @@ function App() {
             path="/disclaimer"
             element={
               <>
-             
+
                 <Disclaimer />
-                
+
               </>
             }
           />
@@ -52,17 +54,17 @@ function App() {
             element={
               <>
                 <Navbar>
-                <Notification/>
+                  <Notification />
                 </Navbar>
               </>
             }
           />
-           <Route
+          <Route
             path="/schedule"
             element={
               <>
                 <Navbar>
-                <Schedule/>
+                  <Schedule />
                 </Navbar>
               </>
             }
@@ -72,13 +74,13 @@ function App() {
             element={
               <>
                 <Navbar>
-                  <Dashboard/>
+                  <Dashboard />
                 </Navbar>
               </>
             }
           />
-          
-          
+
+
 
 
 
