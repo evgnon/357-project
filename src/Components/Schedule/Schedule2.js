@@ -1,12 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { Box } from "@mui/material";
-import { Card, CardContent, Typography } from "@material-ui/core";
-import logo from "../../Assets/Bitcoin.png";
-import { ResponsiveContainer } from "recharts";
+import { Card, CardContent} from "@material-ui/core";
+import logo from "../../Assets/Tesla.png";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { doc, setDoc, query, FieldValue, collection, where } from "firebase/firestore";
+import { doc, setDoc} from "firebase/firestore";
 import { db } from "../../firebase";
 
 const Schedule2 = () => {
@@ -56,7 +55,7 @@ const Schedule2 = () => {
                   marginBottom: "0px",
                   marginLeft: "0px",
                   fontSize: "18px",
-                  marginTop: "0px"
+                  marginTop: "10px"
                 }}
               >
                 TSLA
